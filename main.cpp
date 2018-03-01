@@ -22,6 +22,7 @@ int main(int ac, char **av) {
 	}
 	SimulationInfo::init(split[0]);
 	Rides rides = Rides(std::vector<std::string>(split.begin() + 1, split.end()));
+	std::cout << rides.toString() << std::endl;
 
 	Schedule schedule(SimulationInfo::nbVehicles);
 	schedule.compute(&rides);

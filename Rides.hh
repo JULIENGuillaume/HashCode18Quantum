@@ -17,7 +17,7 @@ public:
 	const std::multimap<unsigned int, Ride *> &getSortedRides() const;
 	std::multimap<unsigned int, Ride *> &getSortedRides();
 	void setSortedRides(const std::multimap<unsigned int, Ride *> &sortedRides);
-
+	std::string toString() const;
 private:
 	const unsigned int m_nbRides;
 	std::vector<Ride *> m_rides;

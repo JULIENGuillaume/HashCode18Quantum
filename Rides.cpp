@@ -26,10 +26,16 @@ std::multimap<unsigned int, Ride *> &Rides::getSortedRides() {
 }
 
 Rides::Rides(const std::vector<std::string> &rides) : m_nbRides(rides.size()), m_rides(rides.size()) {
-	std::cout << rides.size() << std::endl;
 	for (int i = 0 ; i < rides.size() ; i++) {
-		this->m_rides.push_back(new Ride(rides[i], i));
+		this->m_rides[i] = new Ride(rides[i], i);
 		this->m_sortedRides.emplace(this->m_rides.back()->getMustStartAfter(), this->m_rides.back());
 	}
-	std::cout << "Added " << m_sortedRides.size() << " rides" << std::endl;
+}
+
+std::string Rides::toString() const {
+	std::string str;
+	for (int i = 0 ; i < this->m_rides.size() ; i++) {
+		str += this->m_rides[i]->toString() + "\n";
+	}
+	return (str);
 }
