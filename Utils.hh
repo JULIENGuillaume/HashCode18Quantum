@@ -12,7 +12,7 @@
 class Utils {
 public:
 	template <typename T>
-	std::vector<T> parseLine(const std::string &line) {
+	static std::vector<T> parseLine(const std::string &line) {
 		std:: vector<T> tokens;
 		std::stringstream ss(line);
 		T tmp;
