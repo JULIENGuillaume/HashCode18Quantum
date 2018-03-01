@@ -23,7 +23,7 @@ void Schedule::computeOutput(std::string const &outName) {
 	std::ofstream out(outName);
 
 	for (auto &c : m_cars) {
-		out << c.computeOuput();
+		out << c.computeOuput() << std::endl;
 	}
 }
 

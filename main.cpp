@@ -24,6 +24,8 @@ int main(int ac, char **av) {
 	Rides rides = Rides(split.size());
 
 	Schedule schedule(SimulationInfo::nbVehicles);
+	schedule.compute(&rides);
+	schedule.computeOutput(Utils::split(av[1], ".")[0] + ".out");
 
 	return EXIT_SUCCESS;
 }
