@@ -11,7 +11,7 @@
 
 class Rides {
 public:
-	Rides(unsigned int nbRides);
+	Rides(const std::vector<std::string> &rides);
 	const unsigned int getNbRides() const;
 	const std::vector<Ride *> &getRides() const;
 	const std::map<unsigned int, Ride *> &getSortedRides() const;
@@ -20,7 +20,7 @@ public:
 
 private:
 	const unsigned int m_nbRides;
-	const std::vector<Ride *> m_rides;
+	std::vector<Ride *> m_rides;
 	std::map<unsigned int, Ride *> m_sortedRides;
 };
 

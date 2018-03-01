@@ -4,9 +4,6 @@
 
 #include "Rides.hh"
 
-Rides::Rides(unsigned int nbRides) : m_nbRides(nbRides), m_rides(nbRides) {
-}
-
 const unsigned int Rides::getNbRides() const {
 	return m_nbRides;
 }
@@ -25,4 +22,10 @@ void Rides::setSortedRides(const std::map<unsigned int, Ride *> &sortedRides) {
 
 std::map<unsigned int, Ride *> &Rides::getSortedRides() {
 	return this->m_sortedRides;
+}
+
+Rides::Rides(const std::vector<std::string> &rides) : m_nbRides(rides.size()), m_rides(rides.size()) {
+	for (int i = 0 ; i < rides.size() ; i++) {
+		this->m_rides.push_back(new Ride(rides[i], i));
+	}
 }
