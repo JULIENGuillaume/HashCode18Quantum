@@ -3,4 +3,4 @@ project(QuantumHashCode18)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(QuantumHashCode18 main.cpp)
+add_executable(QuantumHashCode18 main.cpp Ride.cpp Ride.hh)
