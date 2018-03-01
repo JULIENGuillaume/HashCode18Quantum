@@ -5,11 +5,7 @@
 #include <fstream>
 #include "Schedule.hh"
 
-Schedule::Schedule(int nCars) {
-	for (int i = 0; i < nCars; i++) {
-		this->m_cars.emplace_back(i + 1);
-	}
-}
+Schedule::Schedule(int nCars) : m_cars(static_cast<unsigned int>(nCars)) {}
 
 void Schedule::addInput(std::string const &s) {
 	//TODO blablabla
@@ -31,7 +27,7 @@ void Schedule::compute(Rides * rides) {
 	auto sorted = rides->getSortedRides();
 	int id = 0;
 	for (auto r : sorted) {
-		m_cars[id].addRide(id + 1);  //TODO: get ride id
+		m_cars[id].addRide(r.second->getId());
 		id = (id + 1) % m_cars.size();
 	}
 }
