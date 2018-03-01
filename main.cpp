@@ -21,7 +21,7 @@ int main(int ac, char **av) {
 		return EXIT_FAILURE;
 	}
 	SimulationInfo::init(split[0]);
-	Rides rides = Rides(std::vector<std::string>(&split[1], &split[split.size() - 1]));
+	Rides rides = Rides(std::vector<std::string>(split.begin() + 1, split.end()));
 
 	Schedule schedule(SimulationInfo::nbVehicles);
 	schedule.compute(&rides);

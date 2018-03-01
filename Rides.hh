@@ -14,14 +14,14 @@ public:
 	Rides(const std::vector<std::string> &rides);
 	const unsigned int getNbRides() const;
 	const std::vector<Ride *> &getRides() const;
-	const std::map<unsigned int, Ride *> &getSortedRides() const;
-	std::map<unsigned int, Ride *> &getSortedRides();
-	void setSortedRides(const std::map<unsigned int, Ride *> &sortedRides);
+	const std::multimap<unsigned int, Ride *> &getSortedRides() const;
+	std::multimap<unsigned int, Ride *> &getSortedRides();
+	void setSortedRides(const std::multimap<unsigned int, Ride *> &sortedRides);
 
 private:
 	const unsigned int m_nbRides;
 	std::vector<Ride *> m_rides;
-	std::map<unsigned int, Ride *> m_sortedRides;
+	std::multimap<unsigned int, Ride *> m_sortedRides;
 };
 
 #endif //QUANTUMHASHCODE18_RIDES_HH
