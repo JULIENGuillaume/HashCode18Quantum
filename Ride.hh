@@ -5,9 +5,14 @@
 #ifndef QUANTUMHASHCODE18_RIDE_HH
 #define QUANTUMHASHCODE18_RIDE_HH
 
+#include <string>
+
 class Ride {
 public:
-	Ride(
+	explicit Ride(const std::string &rideStr, int id);
+
+	explicit Ride(
+			int id,
 			int beginX,
 			int beginY,
 			int endX,
@@ -16,18 +21,15 @@ public:
 			int mustEndBefore
 	);
 	int getBeginX() const;
-	void setBeginX(int beginX);
 	int getBeginY() const;
-	void setBeginY(int beginY);
 	int getEndX() const;
-	void setEndX(int endX);
 	int getEndY() const;
-	void setEndY(int endY);
 	int getMustStartAfter() const;
-	void setMustStartAfter(int mustStartAfter);
 	int getMustEndBefore() const;
-	void setMustEndBefore(int mustEndBefore);
+	int getId() const;
+	void setId(int id);
 private:
+	int m_id;
 	int m_beginX;
 	int m_beginY;
 	int m_endX;
