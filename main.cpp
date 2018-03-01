@@ -25,9 +25,7 @@ int main(int ac, char **av) {
 	SimulationInfo::startBonus = infos[4];
 	SimulationInfo::nbSteps = infos[5];
 
-	auto file = readFile(av[1]);
-
-	Schedule schedule(vector[2]);
+	Schedule schedule(SimulationInfo::nbVehicles);
 
 	return EXIT_SUCCESS;
 }

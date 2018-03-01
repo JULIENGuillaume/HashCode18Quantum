@@ -26,3 +26,12 @@ void Schedule::computeOutput(std::string const &outName) {
 		out << c.computeOuput();
 	}
 }
+
+void Schedule::compute(Rides * rides) {
+	auto sorted = rides->getSortedRides();
+	int id = 0;
+	for (auto r : sorted) {
+		m_cars[id].addRide(id + 1);  //TODO: get ride id
+		id = (id + 1) % m_cars.size();
+	}
+}
