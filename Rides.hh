@@ -22,6 +22,7 @@ private:
 	const unsigned int m_nbRides;
 	std::vector<Ride *> m_rides;
 	std::multimap<unsigned int, Ride *> m_sortedRides;
+	std::map<int, std::multimap<unsigned int, Ride *>> m_betterSortedRides;
 };
 
 #endif //QUANTUMHASHCODE18_RIDES_HH
