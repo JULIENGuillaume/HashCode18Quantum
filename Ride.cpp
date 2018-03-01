@@ -75,3 +75,9 @@ std::string Ride::toString() const {
 			+ " StartAfter: " + std::to_string(this->m_mustStartAfter)
 			+ " EndBefore: " + std::to_string(this->m_mustEndBefore));
 }
+
+int Ride::evaluate() const {
+	int manathanDist = std::abs(m_endX - m_beginX) + std::abs(m_endY - m_beginY);
+	int stepDelta = this->m_mustEndBefore - this->m_mustStartAfter;
+	return (int(((float)manathanDist / stepDelta) * 100.0));
+}
