@@ -7,6 +7,7 @@
 
 #include <string>
 #include "Car.hh"
+#include "Ride.hh"
 
 class Schedule {
 public:
@@ -14,9 +15,11 @@ public:
 	~Schedule() = default;
 public:
 	void addInput(std::string const& s);
+	void addRide(Ride *ride);
 	void computeOutput(std::string const& outName);
 protected:
 	std::vector<Car> m_cars;
+	std::vector<Ride *> m_rides;
 };
 
 #endif //QUANTUMHASHCODE18_SCHEDULE_HH
