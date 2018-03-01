@@ -8,23 +8,30 @@
 class Ride {
 public:
 	Ride(
-			int begin,
-			int anEnd,
+			int beginX,
+			int beginY,
+			int endX,
+			int endY,
 			int mustStartAfter,
 			int mustEndBefore
 	);
-
-	int getBegin() const;
-	void setBegin(int begin);
-	int getAnEnd() const;
-	void setAnEnd(int anEnd);
+	int getBeginX() const;
+	void setBeginX(int beginX);
+	int getBeginY() const;
+	void setBeginY(int beginY);
+	int getEndX() const;
+	void setEndX(int endX);
+	int getEndY() const;
+	void setEndY(int endY);
 	int getMustStartAfter() const;
 	void setMustStartAfter(int mustStartAfter);
 	int getMustEndBefore() const;
 	void setMustEndBefore(int mustEndBefore);
 private:
-	int m_begin;
-	int m_end;
+	int m_beginX;
+	int m_beginY;
+	int m_endX;
+	int m_endY;
 	int m_mustStartAfter;
 	int m_mustEndBefore;
 };

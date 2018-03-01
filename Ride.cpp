@@ -4,34 +4,6 @@
 
 #include "Ride.hh"
 
-Ride::Ride(
-		int begin,
-		int anEnd,
-		int mustStartAfter,
-		int mustEndBefore
-) :
-		m_begin(begin),
-		m_end(anEnd),
-		m_mustStartAfter(mustStartAfter),
-		m_mustEndBefore(mustEndBefore) {
-}
-
-int Ride::getBegin() const {
-	return m_begin;
-}
-
-void Ride::setBegin(int begin) {
-	m_begin = begin;
-}
-
-int Ride::getAnEnd() const {
-	return m_end;
-}
-
-void Ride::setAnEnd(int anEnd) {
-	m_end = anEnd;
-}
-
 int Ride::getMustStartAfter() const {
 	return m_mustStartAfter;
 }
@@ -46,4 +18,52 @@ int Ride::getMustEndBefore() const {
 
 void Ride::setMustEndBefore(int mustEndBefore) {
 	m_mustEndBefore = mustEndBefore;
+}
+
+Ride::Ride(
+		int beginX,
+		int beginY,
+		int endX,
+		int endY,
+		int mustStartAfter,
+		int mustEndBefore
+) :
+		m_beginX(beginX),
+		m_beginY(beginY),
+		m_endX(endX),
+		m_endY(endY),
+		m_mustStartAfter(mustStartAfter),
+		m_mustEndBefore(mustEndBefore) {
+}
+
+int Ride::getBeginX() const {
+	return m_beginX;
+}
+
+void Ride::setBeginX(int beginX) {
+	m_beginX = beginX;
+}
+
+int Ride::getBeginY() const {
+	return m_beginY;
+}
+
+void Ride::setBeginY(int beginY) {
+	m_beginY = beginY;
+}
+
+int Ride::getEndX() const {
+	return m_endX;
+}
+
+void Ride::setEndX(int endX) {
+	m_endX = endX;
+}
+
+int Ride::getEndY() const {
+	return m_endY;
+}
+
+void Ride::setEndY(int endY) {
+	m_endY = endY;
 }
