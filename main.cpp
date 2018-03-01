@@ -5,6 +5,7 @@
 #include <iostream>
 #include "SimulationInfo.hh"
 #include "Utils.hh"
+#include "Rides.hh"
 
 int main(int ac, char **av) {
 	if (ac < 2) {
@@ -18,6 +19,7 @@ int main(int ac, char **av) {
 		return EXIT_FAILURE;
 	}
 	SimulationInfo::init(split[0]);
+	Rides rides = Rides(split.size());
 
 	return EXIT_SUCCESS;
 }

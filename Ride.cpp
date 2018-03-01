@@ -3,24 +3,29 @@
 //
 
 #include "Ride.hh"
+#include "Utils.hh"
 
 int Ride::getMustStartAfter() const {
 	return m_mustStartAfter;
-}
-
-void Ride::setMustStartAfter(int mustStartAfter) {
-	m_mustStartAfter = mustStartAfter;
 }
 
 int Ride::getMustEndBefore() const {
 	return m_mustEndBefore;
 }
 
-void Ride::setMustEndBefore(int mustEndBefore) {
-	m_mustEndBefore = mustEndBefore;
+Ride::Ride(const std::string &rideStr, int id)  {
+	auto infos = Utils::parseLine<int>(rideStr);
+	this->m_id = id;
+	this->m_beginX = infos[0];
+	this->m_beginY = infos[1];
+	this->m_endX = infos[2];
+	this->m_endY= infos[3];
+	this->m_mustStartAfter = infos[4];
+	this->m_mustEndBefore= infos[5];
 }
 
 Ride::Ride(
+		int id,
 		int beginX,
 		int beginY,
 		int endX,
@@ -28,6 +33,7 @@ Ride::Ride(
 		int mustStartAfter,
 		int mustEndBefore
 ) :
+		m_id(id),
 		m_beginX(beginX),
 		m_beginY(beginY),
 		m_endX(endX),
@@ -40,30 +46,22 @@ int Ride::getBeginX() const {
 	return m_beginX;
 }
 
-void Ride::setBeginX(int beginX) {
-	m_beginX = beginX;
-}
-
 int Ride::getBeginY() const {
 	return m_beginY;
-}
-
-void Ride::setBeginY(int beginY) {
-	m_beginY = beginY;
 }
 
 int Ride::getEndX() const {
 	return m_endX;
 }
 
-void Ride::setEndX(int endX) {
-	m_endX = endX;
-}
-
 int Ride::getEndY() const {
 	return m_endY;
 }
 
-void Ride::setEndY(int endY) {
-	m_endY = endY;
+int Ride::getId() const {
+	return m_id;
+}
+
+void Ride::setId(int id) {
+	m_id = id;
 }
