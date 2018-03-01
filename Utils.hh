@@ -25,6 +25,16 @@ public:
 
 	static std::string readFile(std::string const &file);
 
+	static std::vector<std::string> split(
+			const std::string &str,
+			const std::string &separator
+	);
+	static std::vector<std::string> splitAtMax(
+			const std::string &str,
+			const std::string &separator,
+			int max
+	);
+
 };
 
 #endif //QUANTUMHASHCODE18_UTILS_HH
