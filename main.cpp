@@ -26,6 +26,5 @@ int main(int ac, char **av) {
 	SimulationInfo::nbSteps = 0;
 
 	auto file = readFile(av[1]);
-	std::cout << "File is " << file << std::endl;
 	return EXIT_SUCCESS;
 }
