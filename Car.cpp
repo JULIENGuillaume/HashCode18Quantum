@@ -3,9 +3,12 @@
 //
 
 #include <fstream>
+#include <iostream>
 #include "Car.hh"
 
-Car::Car(int id) : m_id(id) {}
+Car::Car(int id) : m_id(id) {
+	std::cout << "Car of id " << id << std::endl;
+}
 
 void Car::addRide(int id) {
 	this->m_rides.push_back(id);

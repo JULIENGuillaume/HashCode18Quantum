@@ -6,6 +6,7 @@
 #include <fstream>
 #include "SimulationInfo.hh"
 #include "Utils.hh"
+#include "Schedule.hh"
 
 std::string readFile(std::string const &file) {
 	std::ifstream t(file);
@@ -32,5 +33,8 @@ int main(int ac, char **av) {
 	SimulationInfo::nbSteps = 0;
 
 	auto file = readFile(av[1]);
+
+	Schedule schedule(vector[2]);
+
 	return EXIT_SUCCESS;
 }
