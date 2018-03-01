@@ -17,11 +17,12 @@ public:
 	const std::map<unsigned int, Ride *> &getSortedRides() const;
 	std::map<unsigned int, Ride *> &getSortedRides();
 	void setSortedRides(const std::map<unsigned int, Ride *> &sortedRides);
-
+	std::string toString() const;
 private:
 	const unsigned int m_nbRides;
 	std::vector<Ride *> m_rides;
 	std::map<unsigned int, Ride *> m_sortedRides;
+
 };
 
 #endif //QUANTUMHASHCODE18_RIDES_HH

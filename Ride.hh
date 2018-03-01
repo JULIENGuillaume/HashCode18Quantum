@@ -6,6 +6,7 @@
 #define QUANTUMHASHCODE18_RIDE_HH
 
 #include <string>
+#include <ostream>
 
 class Ride {
 public:
@@ -28,6 +29,7 @@ public:
 	int getMustEndBefore() const;
 	int getId() const;
 	void setId(int id);
+	std::string toString() const;
 private:
 	int m_id;
 	int m_beginX;

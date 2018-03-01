@@ -65,3 +65,13 @@ int Ride::getId() const {
 void Ride::setId(int id) {
 	m_id = id;
 }
+
+std::string Ride::toString() const {
+	return (std::string("id: ") + std::to_string(this->m_id)
+			+ " bX: " + std::to_string(this->m_beginX)
+			+ " bY: " + std::to_string(this->m_beginY)
+			+ " eX: " + std::to_string(this->m_endX)
+			+ " eY: " + std::to_string(this->m_endY)
+			+ " StartAfter: " + std::to_string(this->m_mustStartAfter)
+			+ " EndBefore: " + std::to_string(this->m_mustEndBefore));
+}
