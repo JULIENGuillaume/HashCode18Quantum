@@ -18,6 +18,7 @@ public:
 	std::multimap<unsigned int, Ride *> &getSortedRides();
 	void setSortedRides(const std::multimap<unsigned int, Ride *> &sortedRides);
 	std::string toString() const;
+	const std::map<int, std::multimap<unsigned int, Ride *>> &getBetterSortedRides() const;
 private:
 	const unsigned int m_nbRides;
 	std::vector<Ride *> m_rides;

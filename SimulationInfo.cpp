@@ -5,15 +5,15 @@
 #include "SimulationInfo.hh"
 #include "Utils.hh"
 
-unsigned int SimulationInfo::nbX = 0;
-unsigned int SimulationInfo::nbY = 0;
-unsigned int SimulationInfo::nbVehicles = 0;
-unsigned int SimulationInfo::nbRides = 0;
-unsigned int SimulationInfo::startBonus = 0;
-unsigned int SimulationInfo::nbSteps = 0;
+uint64_t SimulationInfo::nbX = 0;
+uint64_t SimulationInfo::nbY = 0;
+uint64_t SimulationInfo::nbVehicles = 0;
+uint64_t SimulationInfo::nbRides = 0;
+uint64_t SimulationInfo::startBonus = 0;
+uint64_t SimulationInfo::nbSteps = 0;
 
 void SimulationInfo::init(const std::string &infoStr) {
-	auto infos = Utils::parseLine<unsigned int>(infoStr);
+	auto infos = Utils::parseLine<uint64_t>(infoStr);
 
 	SimulationInfo::nbX = infos[0];
 	SimulationInfo::nbY = infos[1];

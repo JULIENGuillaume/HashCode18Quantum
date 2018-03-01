@@ -19,3 +19,24 @@ std::string Car::computeOuput() {
 	 }
 	return s;
 }
+
+void Car::addRide(
+		int id,
+		int destX,
+		int destY
+) {
+	addRide(id);
+	m_destY = destY;
+	m_destX = destX;
+}
+
+int Car::evaluate(
+		int destX,
+		int destY
+) {
+	return std::abs(destX - m_destX) + std::abs(destY - m_destY);
+}
+
+int Car::getNRide() const {
+	return this->m_rides.size();
+}

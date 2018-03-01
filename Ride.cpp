@@ -4,6 +4,7 @@
 
 #include "Ride.hh"
 #include "Utils.hh"
+#include "SimulationInfo.hh"
 
 int Ride::getMustStartAfter() const {
 	return m_mustStartAfter;
@@ -78,6 +79,6 @@ std::string Ride::toString() const {
 
 int Ride::evaluate() const {
 	int manathanDist = std::abs(m_endX - m_beginX) + std::abs(m_endY - m_beginY);
-	int stepDelta = this->m_mustEndBefore - this->m_mustStartAfter;
-	return (int(((float)stepDelta / (float)manathanDist) * 100.0));
+	//int stepDelta = this->m_mustEndBefore - this->m_mustStartAfter;
+	return static_cast<int>((SimulationInfo::nbX * SimulationInfo::nbY + 1) - manathanDist);
 }

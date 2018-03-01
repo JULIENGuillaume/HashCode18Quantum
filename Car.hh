@@ -14,9 +14,14 @@ public:
 	~Car() = default;
 public:
 	void addRide(int id);
+	void addRide(int id, int destX, int destY);
+	int evaluate(int destX, int destY);
+	int getNRide() const;
 	std::string computeOuput();
 private:
 	std::vector<int> m_rides;
+	int m_destX;
+	int m_destY;
 };
 
 #endif //QUANTUMHASHCODE18_CAR_HH

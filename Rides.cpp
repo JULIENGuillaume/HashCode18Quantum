@@ -40,3 +40,7 @@ std::string Rides::toString() const {
 	}
 	return (str);
 }
+
+const std::map<int, std::multimap<unsigned int, Ride *>> &Rides::getBetterSortedRides() const {
+	return m_betterSortedRides;
+}

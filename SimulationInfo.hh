@@ -9,12 +9,12 @@
 
 class SimulationInfo {
 public:
-	static unsigned int nbX;
-	static unsigned int nbY;
-	static unsigned int nbVehicles;
-	static unsigned int nbRides;
-	static unsigned int startBonus;
-	static unsigned int nbSteps;
+	static uint64_t nbX;
+	static uint64_t nbY;
+	static uint64_t nbVehicles;
+	static uint64_t nbRides;
+	static uint64_t startBonus;
+	static uint64_t nbSteps;
 
 	static void init(const std::string &infos);
 };
