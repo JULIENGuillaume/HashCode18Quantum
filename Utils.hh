@@ -8,6 +8,7 @@
 #include <vector>
 #include <string>
 #include <sstream>
+#include <fstream>
 
 class Utils {
 public:
@@ -21,6 +22,9 @@ public:
 		}
 		return (tokens);
 	}
+
+	static std::string readFile(std::string const &file);
+
 };
 
 #endif //QUANTUMHASHCODE18_UTILS_HH

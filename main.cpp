@@ -3,34 +3,25 @@
 //
 
 #include <iostream>
-#include <fstream>
 #include "SimulationInfo.hh"
 #include "Utils.hh"
-
-std::string readFile(std::string const &file) {
-	std::ifstream t(file);
-	return std::string((std::istreambuf_iterator<char>(t)),
-					   std::istreambuf_iterator<char>());
-}
 
 int main(int ac, char **av) {
 	if (ac < 2) {
 		std::cerr << "No file name given" << std::endl;
 		return EXIT_FAILURE;
 	}
+	auto file = Utils::readFile(av[1]);
+	auto split = std::vector<std::string>();
 
-	auto vector = Utils::parseLine<unsigned int>("1 2 3 4 5 6");
-	for (int i = 0 ; i < vector.size() ; i++) {
-		std::cout << vector[i] << std::endl;
-	}
+	auto infos = Utils::parseLine<unsigned int>(split[0]);
 
-	SimulationInfo::nbX = 0;
-	SimulationInfo::nbY = 0;
-	SimulationInfo::nbVehicles = 0;
-	SimulationInfo::nbRides = 0;
-	SimulationInfo::startBonus = 0;
-	SimulationInfo::nbSteps = 0;
+	SimulationInfo::nbX = infos[0];
+	SimulationInfo::nbY = infos[1];
+	SimulationInfo::nbVehicles = infos[2];
+	SimulationInfo::nbRides = infos[3];
+	SimulationInfo::startBonus = infos[4];
+	SimulationInfo::nbSteps = infos[5];
 
-	auto file = readFile(av[1]);
 	return EXIT_SUCCESS;
 }

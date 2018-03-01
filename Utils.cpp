@@ -3,3 +3,9 @@
 //
 
 #include "Utils.hh"
+
+std::string Utils::readFile(std::string const &file) {
+	std::ifstream t(file);
+	return std::string((std::istreambuf_iterator<char>(t)),
+					   std::istreambuf_iterator<char>());
+}

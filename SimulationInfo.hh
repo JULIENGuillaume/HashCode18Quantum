@@ -13,6 +13,7 @@ public:
 	static unsigned int nbRides;
 	static unsigned int startBonus;
 	static unsigned int nbSteps;
+
 };
 
 #endif //QUANTUMHASHCODE18_SIMULATIONINFO_HH
