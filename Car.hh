@@ -6,7 +6,7 @@
 #define QUANTUMHASHCODE18_CAR_HH
 
 #include <vector>
-#include <c++/4.8.3/string>
+#include <string>
 
 class Car {
 public:

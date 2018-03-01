@@ -2,7 +2,6 @@
 // Created by Guillaume Julien on 01/03/2018.
 //
 
-#include <c++/4.8.3/fstream>
 #include "Car.hh"
 
 Car::Car(int id) : m_id(id) {}
