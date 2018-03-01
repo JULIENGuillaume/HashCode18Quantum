@@ -5,6 +5,8 @@
 #ifndef QUANTUMHASHCODE18_SIMULATIONINFO_HH
 #define QUANTUMHASHCODE18_SIMULATIONINFO_HH
 
+#include <string>
+
 class SimulationInfo {
 public:
 	static unsigned int nbX;
@@ -14,6 +16,7 @@ public:
 	static unsigned int startBonus;
 	static unsigned int nbSteps;
 
+	static void init(const std::string &infos);
 };
 
 #endif //QUANTUMHASHCODE18_SIMULATIONINFO_HH
