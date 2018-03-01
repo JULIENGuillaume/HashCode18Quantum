@@ -15,6 +15,10 @@ void Schedule::addInput(std::string const &s) {
 	//TODO blablabla
 }
 
+void Schedule::addRide(Ride *ride) {
+	this->m_rides.emplace_back(ride);
+}
+
 void Schedule::computeOutput(std::string const &outName) {
 	std::ofstream out(outName);
 
