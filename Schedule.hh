@@ -8,6 +8,7 @@
 #include <string>
 #include "Car.hh"
 #include "Ride.hh"
+#include "Rides.hh"
 
 class Schedule {
 public:
@@ -16,6 +17,7 @@ public:
 public:
 	void addInput(std::string const& s);
 	void addRide(Ride *ride);
+	void compute(Rides *rides);
 	void computeOutput(std::string const& outName);
 protected:
 	std::vector<Car> m_cars;

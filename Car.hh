@@ -10,13 +10,12 @@
 
 class Car {
 public:
-	Car(int id);
+	Car() = default;
 	~Car() = default;
 public:
 	void addRide(int id);
 	std::string computeOuput();
 private:
-	int m_id;
 	std::vector<int> m_rides;
 };
 

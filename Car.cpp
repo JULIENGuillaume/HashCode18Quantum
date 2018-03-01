@@ -3,16 +3,16 @@
 //
 
 #include <fstream>
+#include <iostream>
 #include "Car.hh"
 
-Car::Car(int id) : m_id(id) {}
 
 void Car::addRide(int id) {
 	this->m_rides.push_back(id);
 }
 
 std::string Car::computeOuput() {
-	 auto s = std::to_string(m_id);
+	 auto s = std::to_string(m_rides.size());
 
 	 for (auto r : m_rides) {
 	 	s += " " + std::to_string(r);

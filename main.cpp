@@ -3,8 +3,10 @@
 //
 
 #include <iostream>
+#include <fstream>
 #include "SimulationInfo.hh"
 #include "Utils.hh"
+#include "Schedule.hh"
 #include "Rides.hh"
 
 int main(int ac, char **av) {
@@ -21,6 +23,10 @@ int main(int ac, char **av) {
 	SimulationInfo::init(split[0]);
 	Rides rides = Rides(std::vector<std::string>(&split[1], &split[split.size()]));
 	std::cout << rides.toString() << std::endl;
+
+	Schedule schedule(SimulationInfo::nbVehicles);
+	schedule.compute(&rides);
+	schedule.computeOutput(Utils::split(av[1], ".")[0] + ".out");
 
 	return EXIT_SUCCESS;
 }
