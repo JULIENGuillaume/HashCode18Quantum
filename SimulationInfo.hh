@@ -7,12 +7,12 @@
 
 class SimulationInfo {
 public:
-	static unsigned int nbX = 0;
-	static unsigned int nbY = 0;
-	static unsigned int nbVehicles = 0;
-	static unsigned int nbRides = 0;
-	static unsigned int startBonus = 0;
-	static unsigned int nbSteps = 0;
+	static unsigned int nbX;
+	static unsigned int nbY;
+	static unsigned int nbVehicles;
+	static unsigned int nbRides;
+	static unsigned int startBonus;
+	static unsigned int nbSteps;
 };
 
 #endif //QUANTUMHASHCODE18_SIMULATIONINFO_HH
